@@ -1,7 +1,8 @@
+import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { Page } from "../../Page";
 
 export function CollageBook() {
     return (
-        <Page>This is the collage book</Page>
+        <Page title="collage book" icon={faBook}>This is the collage book</Page>
     )
 }

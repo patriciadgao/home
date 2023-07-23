@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="flex items-stretch h-screen">
+      <div className="flex items-stretch h-screen text-slate-600">
         <BrowserRouter>
           <Sidebar isMenuOpen={isMenuOpen} />
           <Routes>

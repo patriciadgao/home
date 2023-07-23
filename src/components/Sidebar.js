@@ -1,33 +1,42 @@
+import { faBook, faDove, faHouse, faMountainSun, faMugSaucer } from "@fortawesome/free-solid-svg-icons";
+import { classname } from "../funcs/classname";
 import { NavButton } from "./NavButton";
 
 const navInfo = [
     {
         title: "home",
-        navTo: "/"
+        navTo: "/",
+        icon: faHouse
     },
     {
         title: "about",
-        navTo: "about"
+        navTo: "about",
+        icon: faMugSaucer
     },
     {
         title: "collage book",
-        navTo: "collagebook"
+        navTo: "collagebook",
+        icon: faBook
     },
     {
         title: "poetry",
-        navTo: "poetry"
+        navTo: "poetry",
+        icon: faDove
     },
     {
         title: "other adventures",
-        navTo: "otheradventures"
+        navTo: "otheradventures",
+        icon: faMountainSun
     }
 ]
 
 export const Sidebar = ({ isMenuOpen }) => {
-    const classes = isMenuOpen ? "bg-pink-200 transition-width duration-500 w-[90vw] sm:w-[50vw] md:w-[30vw] lg:w-[20vw]" : "bg-pink-200 w-0 overflow-hidden transition-width duration-500";
     return (
-        <div className={classes}>
-            <div className="p-6">
+        <div className={classname("bg-slate-100 transition-width duration-500", isMenuOpen ? "w-[90vw] sm:w-[50vw] md:w-[30vw] lg:w-[20vw]" : "w-0 overflow-hidden")}>
+            <div className={classname("py-6 pl-6 transition-opacity duration-200", isMenuOpen ? "opacity-100" : "opacity-0")}>
+                <div className="flex justify-center mb-6 mt-3">
+                <div className="w-48 h-48 bg-slate-200 rounded-full"></div>
+                </div>
                 <div className="flex flex-col space-y-2">
                     {
                         navInfo.map((i, j) => (
@@ -35,6 +44,7 @@ export const Sidebar = ({ isMenuOpen }) => {
                                 key={j}
                                 title={i.title}
                                 navTo={i.navTo}
+                                icon={i.icon}
                             />
                         ))
                     }

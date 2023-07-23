@@ -1,7 +1,8 @@
+import { faDove } from "@fortawesome/free-solid-svg-icons";
 import { Page } from "../../Page";
 
 export function Poetry() {
     return (
-        <Page>This is poetry</Page>
+        <Page title="poetry" icon={faDove}>This is poetry</Page>
     )
 }
