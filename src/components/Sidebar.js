@@ -35,7 +35,7 @@ export const Sidebar = ({ isMenuOpen }) => {
         <div className={classname("bg-slate-100 transition-width duration-500", isMenuOpen ? "w-[90vw] sm:w-[50vw] md:w-[30vw] lg:w-[20vw]" : "w-0 overflow-hidden")}>
             <div className={classname("py-6 pl-6 transition-opacity duration-200 bg-slate-100", isMenuOpen ? "opacity-100" : "opacity-0")}>
                 <div className="flex justify-center mb-6 mt-3">
-                <div className="w-48 h-48 bg-slate-200 rounded-full"></div>
+                    <div className="w-48 h-48 bg-slate-200 rounded-full shrink-0"></div>
                 </div>
                 <div className="flex flex-col space-y-2">
                     {
