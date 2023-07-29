@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MenuPage onMenuClick={() => setIsMenuOpen(!isMenuOpen)}><Outlet /></MenuPage>}>
               <Route path="about" element={<About />} />
-              <Route path="collagebook" element={<CollageBook />} />
+              <Route path="collagebook/*" element={<CollageBook />} />
               <Route path="poetry" element={<Poetry />} />
               <Route path="otheradventures" element={<OtherAdventures />} />
               <Route path="/" element={<Home />} />

@@ -1,8 +1,7 @@
-import { faMountainSun } from "@fortawesome/free-solid-svg-icons";
 import { Page } from "../../Page";
 
 export function OtherAdventures() {
     return (
-        <Page title="other adventures" icon={faMountainSun}>This is other adventures</Page>
+        <Page title="other adventures" pic={require("../../../img/icons/flower.png")}>This is other adventures</Page>
     )
 }
