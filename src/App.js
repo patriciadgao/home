@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import { MenuPage } from './components/MenuPage';
 import { Sidebar } from './components/Sidebar';
 import { About } from './components/pages/about/About';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex items-stretch min-h-screen text-slate-600">
-        <BrowserRouter>
+        <HashRouter>
           <Sidebar isMenuOpen={isMenuOpen} />
           <Routes>
             <Route path="/" element={<MenuPage onMenuClick={() => setIsMenuOpen(!isMenuOpen)}><Outlet /></MenuPage>}>
@@ -26,7 +26,7 @@ function App() {
               <Route path="*" element={<Home />} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </div>
   );
