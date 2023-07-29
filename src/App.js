@@ -9,7 +9,7 @@ import { OtherAdventures } from './components/pages/otheradventures/OtherAdventu
 import { Poetry } from './components/pages/poetry/Poetry';
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   return (
     <div className="App">
