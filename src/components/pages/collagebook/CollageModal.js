@@ -41,7 +41,7 @@ export function CollageModal() {
       isOpen={!!collageNumber}
       onRequestClose={() => navigate("")}
       closeTimeoutMS={400}
-      className="transition-all p4 z-50 bg-white my-10 overflow-auto max-w-fit focus:outline-0 text-slate-600 m-auto shadow-[0_0_25px_-5px_rgba(0,0,0,0.2)] rounded-sm"
+      className="transition-all p-4 z-50 bg-white my-8 overflow-auto max-w-fit focus:outline-0 text-slate-600 m-auto shadow-[0_0_25px_-5px_rgba(0,0,0,0.2)] rounded-sm"
     >
       {collageNumber && (
         <div>
@@ -80,7 +80,7 @@ export function CollageModal() {
           <div className="space-y-2 px-6 pb-4">
             <div className="flex justify-center items-center space-x-3">
               <LazyLoadImage
-                className="h-[80vh]"
+                className="max-h-[80vh]"
                 alt={"image of collage" + collageNumber}
                 src={require("../../../img/collages/collage" +
                   collageNumber +
