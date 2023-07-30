@@ -76,7 +76,13 @@ const Poem = ({ title, publisher, link }) => {
             : "text-black"
         )}
       >
-        {link ? <a href={link}>{title}</a> : title}
+        {link ? (
+          <a href={link} target="_blank" rel="noreferrer">
+            {title}
+          </a>
+        ) : (
+          title
+        )}
       </div>
       <div className="text-sm">{publisher}</div>
     </li>
