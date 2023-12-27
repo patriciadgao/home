@@ -18,6 +18,26 @@ export function Poetry() {
           <div className="w-1/2 border-r-2 border-dotted border-sky-400"></div>
           <ul className="col-span-3 space-y-5 mb-4">
             <Poem
+              title="Silver Floor"
+              publisher="SLCC Community Writing Center"
+            />
+            <Poem
+              title='"Three nights later when I can&quot;t sleep I stay"'
+              publisher="SLCC Community Writing Center"
+            />
+            <Poem
+              title="Buckley Draw"
+              publisher="SLCC Community Writing Center"
+            />
+            <Poem
+              title="Woman On Car, 1947"
+              publisher="SLCC Community Writing Center"
+            />
+            <Poem
+              title="Assisted Living"
+              publisher="SLCC Community Writing Center"
+            />
+            <Poem
               title="China"
               publisher="Ghost City Press"
               link="https://ghostcitypress.com/poetry-87/2023/2/20/patricia-gao"
