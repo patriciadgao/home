@@ -22,7 +22,7 @@ export function Poetry() {
               publisher="SLCC Community Writing Center"
             />
             <Poem
-              title='"Three nights later when I can&quot;t sleep I stay"'
+              title={`"Three nights later when I can't sleep I stay"`}
               publisher="SLCC Community Writing Center"
             />
             <Poem
