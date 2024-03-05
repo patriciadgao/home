@@ -22,8 +22,8 @@ const navInfo = [
     pic: require("../img/icons/mug.png"),
   },
   {
-    title: "collage book",
-    navTo: "collagebook",
+    title: "art projects",
+    navTo: "arts",
     icon: faBook,
     pic: require("../img/icons/notebook.png"),
   },

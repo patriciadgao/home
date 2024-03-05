@@ -25,7 +25,7 @@ export function CollageBook() {
         {[...Array(80)].map((x, i) => (
           <div key={i}>
             <LazyLoadImage
-              alt={`collage${1}`}
+              alt={`collage${i}`}
               src={require(`../../../img/collages/collage${i + 1}.jpg`)}
               placeholder={
                 <div className="flex items-center">

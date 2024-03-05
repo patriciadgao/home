@@ -1,7 +1,7 @@
 // import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Page } from "../../Page";
+import { Card } from "../../common/Card";
 import { Paragraph } from "../../common/Paragraph";
-import { WebsiteCard } from "./WebsiteCard";
 
 export function Websites() {
   return (
@@ -13,14 +13,14 @@ export function Websites() {
       {/* <ResponsiveMasonry>
         <Masonry gutter="4"> */}
       <Paragraph>
-        <WebsiteCard
+        <Card
           pic={require("../../../img/websites/flowersite.png")}
           link="https://patriciadgao.github.io/dichotomouskey"
           title="Pat's Flowers"
         >
           This site is full of flowers I've photographed and identified. I
           update it pretty regularly when I see new flowers.
-        </WebsiteCard>
+        </Card>
       </Paragraph>
       {/* </Masonry>
       </ResponsiveMasonry> */}

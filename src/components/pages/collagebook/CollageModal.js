@@ -40,7 +40,7 @@ export function CollageModal() {
     <Modal
       isOpen={!!collageNumber}
       onRequestClose={() => navigate("")}
-      closeTimeoutMS={400}
+      closeTimeoutMS={0}
       className="transition-all p-4 z-50 bg-white my-8 overflow-auto max-w-fit focus:outline-0 text-slate-600 m-auto shadow-[0_0_25px_-5px_rgba(0,0,0,0.2)] rounded-sm"
     >
       {collageNumber && (

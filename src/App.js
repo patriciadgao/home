@@ -3,8 +3,10 @@ import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import { MenuPage } from "./components/MenuPage";
 import { Sidebar } from "./components/Sidebar";
 import { About } from "./components/pages/about/About";
+import { Arts } from "./components/pages/arts/Arts";
 import { CollageBook } from "./components/pages/collagebook/CollageBook";
 import { Home } from "./components/pages/home/Home";
+import { PlaylistCovers } from "./components/pages/playlistcovers/PlaylistCovers";
 import { Poetry } from "./components/pages/poetry/Poetry";
 import { Websites } from "./components/pages/websites/Websites";
 
@@ -26,7 +28,9 @@ function App() {
               }
             >
               <Route path="about" element={<About />} />
+              <Route path="arts" element={<Arts />} />
               <Route path="collagebook/*" element={<CollageBook />} />
+              <Route path="playlistcovers/*" element={<PlaylistCovers />} />
               <Route path="poetry" element={<Poetry />} />
               <Route path="websites" element={<Websites />} />
               <Route path="/" element={<Home />} />
