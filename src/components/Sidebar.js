@@ -34,7 +34,7 @@ const navInfo = [
     pic: require("../img/icons/bird.png"),
   },
   {
-    title: "websites",
+    title: "web projects",
     navTo: "websites",
     icon: faMountainSun,
     pic: require("../img/icons/flower.png"),

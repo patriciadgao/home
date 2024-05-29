@@ -1,14 +1,14 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
 import BarLoader from "react-spinners/BarLoader";
-import { Page } from "../../Page";
-import { Paragraph } from "../../common/Paragraph";
+import { Page } from "../../../Page";
+import { Paragraph } from "../../../common/Paragraph";
 import { PlaylistModal } from "./PlaylistModal";
 
 export function PlaylistCovers() {
     const navigate = useNavigate();
     return (
-        <Page title="playlist covers" pic={require("../../../img/icons/notebook.png")}>
+        <Page title="playlist covers" pic={require("../../../../img/icons/notebook.png")}>
             <Paragraph>
                 I used to challenge myself all the time to curate the first four songs on a Spotify playlist to form a cohesive playlist cover, and I have lots of good memories of sending ideas back and forth with my friend Zoë.
             </Paragraph>
@@ -23,7 +23,7 @@ export function PlaylistCovers() {
                     <div key={i}>
                         <LazyLoadImage
                             alt={`playlistcover${55 - i}`}
-                            src={require(`../../../img/playlistcovers/pc${55 - i}.png`)}
+                            src={require(`../../../../img/playlistcovers/pc${55 - i}.png`)}
                             placeholder={
                                 <div className="flex items-center">
                                     <BarLoader

@@ -4,11 +4,12 @@ import { MenuPage } from "./components/MenuPage";
 import { Sidebar } from "./components/Sidebar";
 import { About } from "./components/pages/about/About";
 import { Arts } from "./components/pages/arts/Arts";
-import { CollageBook } from "./components/pages/collagebook/CollageBook";
+import { CollageBook } from "./components/pages/arts/collagebook/CollageBook";
+import { PlaylistCovers } from "./components/pages/arts/playlistcovers/PlaylistCovers";
 import { Home } from "./components/pages/home/Home";
-import { PlaylistCovers } from "./components/pages/playlistcovers/PlaylistCovers";
 import { Poetry } from "./components/pages/poetry/Poetry";
 import { Websites } from "./components/pages/websites/Websites";
+import { PatsQuestions } from "./components/pages/websites/patsquestions/PatsQuestions";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -28,11 +29,18 @@ function App() {
               }
             >
               <Route path="about" element={<About />} />
+              <Route path="arts">
+                <Route path="" element={<Arts />} />
+                <Route path="collagebook/*" element={<CollageBook />} />
+                <Route path="playlistcovers/*" element={<PlaylistCovers />} />
+              </Route>
               <Route path="arts" element={<Arts />} />
-              <Route path="collagebook/*" element={<CollageBook />} />
-              <Route path="playlistcovers/*" element={<PlaylistCovers />} />
               <Route path="poetry" element={<Poetry />} />
               <Route path="websites" element={<Websites />} />
+              <Route path="websites">
+                <Route path="" element={<Websites />} />
+                <Route path="patsquestions" element={<PatsQuestions />} />
+              </Route>
               <Route path="/" element={<Home />} />
               <Route path="*" element={<Home />} />
             </Route>

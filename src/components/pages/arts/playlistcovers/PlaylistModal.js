@@ -82,7 +82,7 @@ export function PlaylistModal() {
                             <LazyLoadImage
                                 className="max-h-[60vh]"
                                 alt={"image of playlist" + playlistNumber}
-                                src={require("../../../img/playlistcovers/pc" +
+                                src={require("../../../../img/playlistcovers/pc" +
                                     playlistNumber +
                                     ".png")}
                                 placeholder={

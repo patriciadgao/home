@@ -82,7 +82,7 @@ export function CollageModal() {
               <LazyLoadImage
                 className="max-h-[80vh]"
                 alt={"image of collage" + collageNumber}
-                src={require("../../../img/collages/collage" +
+                src={require("../../../../img/collages/collage" +
                   collageNumber +
                   ".jpg")}
                 placeholder={

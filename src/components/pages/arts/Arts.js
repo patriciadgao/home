@@ -16,7 +16,7 @@ export function Arts() {
                     <Card
                         pic={require("../../../img/collages/collage60.jpg")}
                         title="collage book"
-                        navigateTo={"../collagebook"}
+                        navigateTo={"collagebook"}
                     >
                         Photos from a notebook of 80 collages!
                     </Card>
@@ -25,7 +25,7 @@ export function Arts() {
                     <Card
                         pic={require("../../../img/playlistcovers/pc53.png")}
                         title="playlist covers"
-                        navigateTo={"../playlistcovers"}
+                        navigateTo={"playlistcovers"}
                     >
                         55 playlist covers that I drew!
                     </Card>
