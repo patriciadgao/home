@@ -4,6 +4,7 @@ import BarLoader from "react-spinners/BarLoader";
 import { Page } from "../../../Page";
 import { Paragraph } from "../../../common/Paragraph";
 import { PlaylistModal } from "./PlaylistModal";
+import { coverNumber } from "./coverNumber";
 
 export function PlaylistCovers() {
     const navigate = useNavigate();
@@ -13,19 +14,19 @@ export function PlaylistCovers() {
                 I used to challenge myself all the time to curate the first four songs on a Spotify playlist to form a cohesive playlist cover, and I have lots of good memories of sending ideas back and forth with my friend Zoë.
             </Paragraph>
             <Paragraph>
-                I was kind of a playlist cover purist and thought that it was an eyesore to have one picture instead of four, but my buddy Joe convinced me otherwise. After a little over three months, I've got 55 covers you can scroll through now!
+                I was kind of a playlist cover purist and thought that it was an eyesore to have one picture instead of four, but my buddy Joe convinced me otherwise. After a little over three months, I've got {coverNumber} covers you can scroll through now!
             </Paragraph>
             <Paragraph>
                 I'm still a purist in a way—all of these drawings are freehand, except the one for "The Winterspring", which I traced from a drawing that I did in 2018.
             </Paragraph>
             <div className="grid md:grid-cols-5 gap-2">
-                {[...Array(57)].map((x, i) => {
-                    const coverNumber = 57 - i;
+                {[...Array(coverNumber)].map((x, i) => {
+                    const coverId = coverNumber - i;
                     return (
                         <div key={i}>
                             <LazyLoadImage
-                                alt={`playlistcover${coverNumber}`}
-                                src={require(`../../../../img/playlistcovers/pc${coverNumber}.png`)}
+                                alt={`playlistcover${coverId}`}
+                                src={require(`../../../../img/playlistcovers/pc${coverId}.png`)}
                                 placeholder={
                                     <div className="flex items-center">
                                         <BarLoader
@@ -36,7 +37,7 @@ export function PlaylistCovers() {
                                         />
                                     </div>
                                 }
-                                onClick={() => navigate((coverNumber).toString())}
+                                onClick={() => navigate((coverId).toString())}
                                 className="hover:cursor-pointer"
                             />
                         </div>

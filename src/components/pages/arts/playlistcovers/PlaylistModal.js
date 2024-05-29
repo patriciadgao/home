@@ -8,6 +8,7 @@ import { useCallback } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Modal from "react-modal";
 import { useNavigate, useParams } from "react-router-dom";
+import { coverNumber } from "./coverNumber";
 
 Modal.defaultStyles.overlay.backgroundColor = "#ffffff80";
 Modal.setAppElement("body");
@@ -29,7 +30,7 @@ export function PlaylistModal() {
     const prevPlaylist = useCallback(() => {
         const num = parseInt(playlistNumber);
         const prev = num + 1;
-        if (prev > 57) {
+        if (prev > coverNumber) {
             return;
         } else {
             navigate(prev.toString());
@@ -48,7 +49,7 @@ export function PlaylistModal() {
                     <div className="top-0 sticky flex justify-between items-center bg-white py-4 px-6">
                         <div className="w-8"></div>
                         <div className="font-bold flex space-x-4">
-                            {parseInt(playlistNumber) < 57 ? (
+                            {parseInt(playlistNumber) < coverNumber ? (
                                 <div
                                     className="hover:cursor-pointer w-2 hover:text-slate-400"
                                     onClick={prevPlaylist}
