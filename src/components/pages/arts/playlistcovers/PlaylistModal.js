@@ -29,7 +29,7 @@ export function PlaylistModal() {
     const prevPlaylist = useCallback(() => {
         const num = parseInt(playlistNumber);
         const prev = num + 1;
-        if (prev > 55) {
+        if (prev > 57) {
             return;
         } else {
             navigate(prev.toString());
@@ -48,7 +48,7 @@ export function PlaylistModal() {
                     <div className="top-0 sticky flex justify-between items-center bg-white py-4 px-6">
                         <div className="w-8"></div>
                         <div className="font-bold flex space-x-4">
-                            {parseInt(playlistNumber) < 55 ? (
+                            {parseInt(playlistNumber) < 57 ? (
                                 <div
                                     className="hover:cursor-pointer w-2 hover:text-slate-400"
                                     onClick={prevPlaylist}
@@ -153,5 +153,7 @@ const playlistTitles = [
     "Kitchen Time",
     "VW + BB",
     "What Would You Like For Breakfast?",
-    "M Field"
+    "M Field",
+    "Singer-Songwriter Storytelling",
+    "Gardenera"
 ]

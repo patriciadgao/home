@@ -19,26 +19,30 @@ export function PlaylistCovers() {
                 I'm still a purist in a way—all of these drawings are freehand, except the one for "The Winterspring", which I traced from a drawing that I did in 2018.
             </Paragraph>
             <div className="grid md:grid-cols-5 gap-2">
-                {[...Array(55)].map((x, i) => (
-                    <div key={i}>
-                        <LazyLoadImage
-                            alt={`playlistcover${55 - i}`}
-                            src={require(`../../../../img/playlistcovers/pc${55 - i}.png`)}
-                            placeholder={
-                                <div className="flex items-center">
-                                    <BarLoader
-                                        color={"#94a3b8"}
-                                        loading={true}
-                                        size={50}
-                                        aria-label="Loading Spinner"
-                                    />
-                                </div>
-                            }
-                            onClick={() => navigate((55 - i).toString())}
-                            className="hover:cursor-pointer"
-                        />
-                    </div>
-                ))}
+                {[...Array(57)].map((x, i) => {
+                    const coverNumber = 57 - i;
+                    return (
+                        <div key={i}>
+                            <LazyLoadImage
+                                alt={`playlistcover${coverNumber}`}
+                                src={require(`../../../../img/playlistcovers/pc${coverNumber}.png`)}
+                                placeholder={
+                                    <div className="flex items-center">
+                                        <BarLoader
+                                            color={"#94a3b8"}
+                                            loading={true}
+                                            size={50}
+                                            aria-label="Loading Spinner"
+                                        />
+                                    </div>
+                                }
+                                onClick={() => navigate((coverNumber).toString())}
+                                className="hover:cursor-pointer"
+                            />
+                        </div>
+                    )
+                }
+                )}
             </div>
             <PlaylistModal />
         </Page>
