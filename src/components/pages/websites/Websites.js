@@ -18,13 +18,13 @@ export function Websites() {
           This site is full of flowers I've photographed and identified. I
           update it pretty regularly when I see new flowers.
         </Card>
-        <Card
+        {/* <Card
           navigateTo="patsquestions"
           title="Pat's Questions"
         >
           This page has several questions I wrote in an attempt to
           make a better set of questions to make anyone fall in love.
-        </Card>
+        </Card> */}
       </div>
     </Page>
   );
